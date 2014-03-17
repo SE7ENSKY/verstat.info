@@ -2,11 +2,12 @@ doctype html
 html
 	head
 		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, user-scalable=yes")
 		title= site.title
 		link(href=asset("i/favicon.png"), rel="shortcut icon", type="image/x-icon")
 		link(href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,700italic,400italic', rel='stylesheet', type='text/css')
-
 		block styles
+		script(src="http://code.jquery.com/jquery-1.11.0.min.js")
 	body
 		block root
 			!= content

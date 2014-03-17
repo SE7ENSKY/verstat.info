@@ -1,12 +1,13 @@
 //---
 	layout: layouts/main
 
-//- +b.intro
-//- 	+e.logo
-//- 		img(src=asset("i/logo-big.png"), alt="")
-//- 	+e.description
-//- 		| Awesome tool for markup!
-//- 	+e.features
++b.intro
+	+e.logo
+		img(src=asset("i/logo-big.png"), alt="")
+	+e.description
+		| Awesome markup tool!
+	+e.navigation
+		+b("ul").menu: +i
 
 .wrap(style="padding-top: 80px;")
 	h1.sr-only Verstat
