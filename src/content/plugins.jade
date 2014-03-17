@@ -1,0 +1,62 @@
+//---
+	title: Plugins
+
+h2 General purpose
+
+dt watch
+dd watch source files for changes and rebuild relevant output files
+
+dt livereload
+dd do livereload on file changes
+
+dt sprockets
+dd concat css and js files in sprockets-like way: <code>/*= require ... */</code> and <code>/*= require_tree ... */</code>
+
+dt globals
+
+
+h2 Preprocessors
+
+dt coffee
+dt stylus
+dt less
+dt jade
+dt marked
+
+
+h2 Postprocessors
+
+dt prettify-html
+dd do correct HTML prettifying
+
+dt uglify
+dd JavaScript mangler/minifier
+
+dt csso
+dd Yandex's CSS optimizer/minifier
+
+dt cssmin
+dd port of YUICompressor for CSS
+
+dt group-css-media-queries
+dd don't be scared on preprocessor output, media query sections will be grouped!
+
+
+h2 BEM
+
+p Plugins related to Block-Element-Modifier methodology. More info at
+	a(href="http://bem.info") bem.info
+
+dt bemto
+dd kizu's bemto smart mixins for jade. Depends on bem plugin.
+
+dt bem
+dd generic bem boilerplate
+
+dt jadebem [deprecated]
+dd our old simple mixins for jade. Deprecated in favor of bemto.
+
+
+h2 Other plugins
+dt moment
+dd adds moment.js to templates, for date formatting

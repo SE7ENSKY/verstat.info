@@ -10,7 +10,7 @@
 		+b("ul").menu: +i
 
 .wrap(style="padding-top: 80px;")
-	h1.sr-only Verstat
+	h1.sr-only= site.title
 
 	mixin show-section(name)
 		- var section = queryFile({ fullname: "content/" + name })
@@ -20,5 +20,6 @@
 	
 	+show-section("wtf")
 	+show-section("start")
+	+show-section("plugins")
 	+show-section("contribute")
 	+show-section("credits")
