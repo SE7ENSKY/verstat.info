@@ -7,19 +7,10 @@ block scripts
 	script(src=asset("verstat.min.js"))
 
 block root
-	+b.header
+	+b.header.hidden
 		.wrap
 			a.logo(href="http://verstat.info", title="")
 				img(src=asset("i/logo.png"), alt="Verstat")
-			+b("ul").menu
-				+e.item
-					+e.link(href="#wtf", title="") What is it?
-				+e.item
-					+e.link(href="#start", title="") Getting started
-				+e.item
-					+e.link(href="#plugins", title="") Plugins
-				+e.item
-					+e.link(href="https://github.com/se7ensky/verstat", title="", tartget="_blank") GitHub
-
+			+b("ul").menu: +i
 	.content
 		!= content

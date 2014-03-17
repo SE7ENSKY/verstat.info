@@ -1,10 +1,14 @@
 .header
-	background darkColor
+	background rgba(46, 43, 41, 0.95)
 	fixed top left
 	width 100%
 	clearfix()
 	padding 10px 0
+	margin-top 0
+	transition margin .3s ease
 	.logo
 		float left
 	.menu
 		float right
+	&.hidden	
+		margin-top -80px
