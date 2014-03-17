@@ -11,7 +11,7 @@
     "verstat-plugin-bemto": "~1.2.0",
     "verstat-plugin-coffee": "~1.0.0",
     "verstat-plugin-uglify": "~1.0.0",
-    "verstat-plugin-prettify-html": "~1.2.1",
+    "verstat-plugin-prettify-html": "~1.2.2",
     "verstat-plugin-group-css-media-queries": "~1.0.0",
     "verstat-plugin-stylus": "~1.1.0",
     "verstat-plugin-livereload": "~1.1.0",
