@@ -7,3 +7,4 @@ group-css-media-queries: true
 /*= require assets/styles/general */
 /*= require assets/styles/helpers */
 /*= require_tree blocks */
+/*= require vendor/prism/prism */
