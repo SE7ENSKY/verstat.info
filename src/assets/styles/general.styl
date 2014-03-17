@@ -1,0 +1,47 @@
+body
+	font-family mainFont
+
+.wrap
+	display block
+	width 90%
+	max-width 980px
+	margin 0 auto
+
+.content
+	font-size 20px
+	line-height 1.5
+	color blackColor
+	ul
+		padding-left 8%
+		margin-bottom horizontalSpace
+		li
+			list-style disc
+	a
+		color #1e0fbe
+		text-decoration none
+		&:hover
+			text-decoration underline
+		&:active
+			opacity .8
+		&:visited
+			color #609
+
+
+section
+	padding 30px 0
+
+h1
+	font-size 180%
+	brdr = 12px
+	space = 12px
+	border-left brdr solid mainColor
+	padding-left space
+	margin-left (brdr + space) * (-1)
+	margin-bottom horizontalSpace
+h2
+	font-size 150%
+h3
+	font-size 130%
+
+p
+	margin-bottom horizontalSpace

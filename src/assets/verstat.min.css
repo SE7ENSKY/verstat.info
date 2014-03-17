@@ -4,4 +4,6 @@ group-css-media-queries: true
 ---
 
 /*= require assets/styles/reset */
+/*= require assets/styles/general */
+/*= require assets/styles/helpers */
 /*= require_tree blocks */
