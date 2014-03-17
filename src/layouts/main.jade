@@ -1,0 +1,11 @@
+extends root
+
+block styles
+	link(rel="stylesheet", href=asset("verstat.min.css"))
+
+block scripts
+	script(src=asset("verstat.min.js"))
+
+block root
+	.content
+		!= content

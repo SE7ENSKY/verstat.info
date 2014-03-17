@@ -1,0 +1,7 @@
+---
+cssmin: true
+group-css-media-queries: true
+---
+
+/*= require assets/styles/reset */
+/*= require_tree blocks */
