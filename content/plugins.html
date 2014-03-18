@@ -1,0 +1,57 @@
+<pre><code class="language-bash">verstat install &lt;plugin1&gt; &lt;plugin2&gt;
+verstat uninstall &lt;plugin1&gt; &lt;plugin2&gt;</code></pre>
+<h2>General purpose</h2>
+<dl><dt>watch</dt>
+	<dd>Watch source files for changes and rebuild. It is simple but very smart.
+		<br>Only relevant files are rebuilt.</dd><dt>livereload</dt>
+	<dd>Do livereload on file changes. HTML and JS reloads whole page, while CSS is applied without page reload. Works together with "watch" plugin.</dd><dt>sprockets</dt>
+	<dd>Concat css and js files in sprockets-like way:
+		<br><pre class="inline"><code class="language-javascript">/*= require ... */</code></pre> and <pre class="inline"><code class="language-javascript">/*= require_tree ... */</code></pre>
+		<br>
+		<div class="example">Examples: <a href="https://github.com/Se7enSky/verstat.info/blob/master/src/assets/verstat.min.js" target="_blank">verstat.min.js</a> and <a href="https://github.com/Se7enSky/verstat.info/blob/master/src/assets/verstat.min.css" target="_blank">verstat.min.css</a>.</div>
+	</dd><dt>globals</dt>
+	<dd>Prepend file contents into all other files same-type source files. Currently supports Stylus and Jade files.
+		<br>
+		<div class="example">For example, you have many Stylus files.
+			<br>You can define global settings, such as fonts, dimensions, utility mixins without needing to @import.
+			<br><a href="https://github.com/Se7enSky/verstat.info/tree/master/src/globals" target="_blank">See here</a>.</div>
+	</dd>
+</dl>
+<h2>Preprocessors</h2>
+<dl><dt>coffee</dt>
+	<dd>CoffeeScript is a little language that compiles into JavaScript.
+		<br><a href="http://coffeescript.org/" target="_blank">http://coffeescript.org/</a>
+	</dd><dt>jade</dt>
+	<dd>Jade is a high performance template engine heavily influenced by Haml and implemented with JavaScript
+		<br><a href="http://jade-lang.com/" target="_blank">http://jade-lang.com/</a>
+	</dd><dt>stylus</dt>
+	<dd>Expressive, dynamic, robust CSS.
+		<br><a href="http://learnboost.github.io/stylus/" target="_blank">http://learnboost.github.io/stylus/</a>
+	</dd><dt>less</dt>
+	<dd>Less is a popular CSS pre-processor.
+		<br><a href="http://lesscss.org/" target="_blank">http://lesscss.org/</a>
+	</dd><dt>marked</dt>
+	<dd>Markdown is a plain text formatting syntax.
+		<br><a href="http://en.wikipedia.org/wiki/Markdown" target="_blank">http://en.wikipedia.org/wiki/Markdown</a>
+	</dd>
+</dl>
+<h2>Postprocessors</h2>
+<dl><dt>prettify-html</dt>
+	<dd>do correct HTML prettifying</dd><dt>uglify</dt>
+	<dd>JavaScript mangler/minifier</dd><dt>csso</dt>
+	<dd>Yandex's CSS optimizer/minifier</dd><dt>cssmin</dt>
+	<dd>port of YUICompressor for CSS</dd><dt>group-css-media-queries</dt>
+	<dd>don't be scared on preprocessor output, media query sections will be grouped!</dd>
+</dl>
+<h2>BEM</h2>
+<p>Plugins related to Block-Element-Modifier methodology. More info at&nbsp;<a href="http://bem.info" target="_blank">bem.info</a>
+</p>
+<dl><dt>bemto</dt>
+	<dd>kizu's bemto smart mixins for jade. Depends on bem plugin.</dd><dt>bem</dt>
+	<dd>generic bem boilerplate</dd><dt>jadebem [deprecated]</dt>
+	<dd>our old simple mixins for jade. Deprecated in favor of bemto.</dd>
+</dl>
+<h2>Other plugins</h2>
+<dl><dt>moment</dt>
+	<dd>adds moment.js to templates, for date formatting</dd>
+</dl>

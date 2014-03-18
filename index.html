@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=yes">
+	<title>Verstat</title>
+	<meta property="og:site_name" content="Verstat">
+	<meta property="og:title" content="Jedi's frontend tool!">
+	<meta property="og:description" content="Simplify and automate website development process. After years of CMS-based, then Grunt and Docpad-based frontend development, we just made our own vehicle. It is very similar, but simpler and smarter.">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="http://verstat.info/">
+	<meta property="og:image" content="http://verstat.info/assets/i/verstat-og-image.jpg">
+	<meta property="og:locale" content="en_US">
+	<link href="/assets/i/favicon.png" rel="shortcut icon" type="image/x-icon">
+	<link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Sans+Mono|Droid+Serif:400,700,400italic" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="/assets/verstat.min.css">
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+
+<body>
+	<div class="header hidden">
+		<div class="wrap">
+			<a href="http://verstat.info" title="" class="logo">
+				<img src="/assets/i/logo.png" alt="Verstat">
+			</a>
+			<ul class="menu">
+				<li class="menu__item"><a href="#wtf" title="" class="menu__link">What is it?</a>
+				</li>
+				<li class="menu__item"><a href="#start" title="" class="menu__link">Getting started</a>
+				</li>
+				<li class="menu__item"><a href="#plugins" title="" class="menu__link">Plugins</a>
+				</li>
+				<li class="menu__item"><a href="https://github.com/se7ensky/verstat" title="" target="_blank" class="menu__link">GitHub</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="content">
+		<div class="intro">
+			<div class="intro__logo">
+				<img src="/assets/i/logo-big.png" alt="">
+			</div>
+			<div class="intro__description">Jedi's frontend tool</div>
+			<div class="intro__navigation">
+				<ul class="menu">
+					<li class="menu__item"><a href="#wtf" title="" class="menu__link">What is it?</a>
+					</li>
+					<li class="menu__item"><a href="#start" title="" class="menu__link">Getting started</a>
+					</li>
+					<li class="menu__item"><a href="#plugins" title="" class="menu__link">Plugins</a>
+					</li>
+					<li class="menu__item"><a href="https://github.com/se7ensky/verstat" title="" target="_blank" class="menu__link">GitHub</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div style="padding-top: 80px;" class="wrap">
+			<h1 class="sr-only">Verstat</h1>
+			<section id="wtf">
+				<h1>WTF is Verstat?</h1>
+				<article>
+					<p>Verstat is a tool, intended to simplify and automate website development process.</p>
+					<p>After years of CMS-based, then Grunt and Docpad-based frontend development, we just made our own vehicle. It is very similar, but simpler and smarter.</p>
+					<p>This website is made with Verstat. Source code available <a href="http://github.com/Se7enSky/verstat.info" target="_blank">at GitHub</a>.</p>
+				</article>
+			</section>
+			<section id="start">
+				<h1>Getting started</h1>
+				<article>
+					<h2>Prerequisites</h2>
+					<ol>
+						<li>Install fresh stable Node.JS with NPM from <a target="_blank" href="http://nodejs.org/">official website</a>.</li>
+						<li>Install Verstat <abbr title="Command Line Interface">CLI</abbr> tool: <pre><code class="language-bash">npm install -g verstat-cli</code></pre>
+						</li>
+					</ol>
+					<h2>New project</h2>
+					<ol>
+						<li>Create project dir, open terminal at this directory.</li>
+						<li>Initialize empty project: <pre><code class="language-bash">verstat init</code></pre>
+						</li>
+						<li>Install your favorite plugins:<pre><code class="language-bash">verstat install watch livereload jade coffee stylus</code></pre>
+						</li>
+						<li>Start Verstat!<pre><code class="language-bash">verstat serve</code></pre>
+						</li>
+						<li>Open browser at <a href="http://localhost:8080/" target="_blank">http://localhost:8080/</a>
+						</li>
+						<li>Edit files in src directory and see changes live!</li>
+					</ol>
+					<h2>Generate static website</h2><pre><code class="language-bash">verstat generate</code></pre>
+					<p>... and take output from <b>out</b> directory.</p>
+				</article>
+			</section>
+			<section id="plugins">
+				<h1>Plugins</h1>
+				<article><pre><code class="language-bash">verstat install &lt;plugin1&gt; &lt;plugin2&gt;
+verstat uninstall &lt;plugin1&gt; &lt;plugin2&gt;</code></pre>
+					<h2>General purpose</h2>
+					<dl><dt>watch</dt>
+						<dd>Watch source files for changes and rebuild. It is simple but very smart.
+							<br>Only relevant files are rebuilt.</dd><dt>livereload</dt>
+						<dd>Do livereload on file changes. HTML and JS reloads whole page, while CSS is applied without page reload. Works together with "watch" plugin.</dd><dt>sprockets</dt>
+						<dd>Concat css and js files in sprockets-like way:
+							<br><pre class="inline"><code class="language-javascript">/*= require ... */</code></pre> and <pre class="inline"><code class="language-javascript">/*= require_tree ... */</code></pre>
+							<br>
+							<div class="example">Examples: <a href="https://github.com/Se7enSky/verstat.info/blob/master/src/assets/verstat.min.js" target="_blank">verstat.min.js</a> and <a href="https://github.com/Se7enSky/verstat.info/blob/master/src/assets/verstat.min.css" target="_blank">verstat.min.css</a>.</div>
+						</dd><dt>globals</dt>
+						<dd>Prepend file contents into all other files same-type source files. Currently supports Stylus and Jade files.
+							<br>
+							<div class="example">For example, you have many Stylus files.
+								<br>You can define global settings, such as fonts, dimensions, utility mixins without needing to @import.
+								<br><a href="https://github.com/Se7enSky/verstat.info/tree/master/src/globals" target="_blank">See here</a>.</div>
+						</dd>
+					</dl>
+					<h2>Preprocessors</h2>
+					<dl><dt>coffee</dt>
+						<dd>CoffeeScript is a little language that compiles into JavaScript.
+							<br><a href="http://coffeescript.org/" target="_blank">http://coffeescript.org/</a>
+						</dd><dt>jade</dt>
+						<dd>Jade is a high performance template engine heavily influenced by Haml and implemented with JavaScript
+							<br><a href="http://jade-lang.com/" target="_blank">http://jade-lang.com/</a>
+						</dd><dt>stylus</dt>
+						<dd>Expressive, dynamic, robust CSS.
+							<br><a href="http://learnboost.github.io/stylus/" target="_blank">http://learnboost.github.io/stylus/</a>
+						</dd><dt>less</dt>
+						<dd>Less is a popular CSS pre-processor.
+							<br><a href="http://lesscss.org/" target="_blank">http://lesscss.org/</a>
+						</dd><dt>marked</dt>
+						<dd>Markdown is a plain text formatting syntax.
+							<br><a href="http://en.wikipedia.org/wiki/Markdown" target="_blank">http://en.wikipedia.org/wiki/Markdown</a>
+						</dd>
+					</dl>
+					<h2>Postprocessors</h2>
+					<dl><dt>prettify-html</dt>
+						<dd>do correct HTML prettifying</dd><dt>uglify</dt>
+						<dd>JavaScript mangler/minifier</dd><dt>csso</dt>
+						<dd>Yandex's CSS optimizer/minifier</dd><dt>cssmin</dt>
+						<dd>port of YUICompressor for CSS</dd><dt>group-css-media-queries</dt>
+						<dd>don't be scared on preprocessor output, media query sections will be grouped!</dd>
+					</dl>
+					<h2>BEM</h2>
+					<p>Plugins related to Block-Element-Modifier methodology. More info at&nbsp;<a href="http://bem.info" target="_blank">bem.info</a>
+					</p>
+					<dl><dt>bemto</dt>
+						<dd>kizu's bemto smart mixins for jade. Depends on bem plugin.</dd><dt>bem</dt>
+						<dd>generic bem boilerplate</dd><dt>jadebem [deprecated]</dt>
+						<dd>our old simple mixins for jade. Deprecated in favor of bemto.</dd>
+					</dl>
+					<h2>Other plugins</h2>
+					<dl><dt>moment</dt>
+						<dd>adds moment.js to templates, for date formatting</dd>
+					</dl>
+				</article>
+			</section>
+			<section id="contribute">
+				<h1>Contribute</h1>
+				<article>
+					<p>Verstat <i>is</i> and <i>always</i> will be open source project.</p>
+					<p>Feel free to fork any Verstat-related repository and make pull requests <a href="https://github.com/search?q=verstat" target="_blank">at GitHub</a>.</p>
+					<p>Any questions and proposals &rarr; <a href="mailto:verstat@se7ensky.com">verstat@se7ensky.com</a>.</p>
+					<ul class="inline">
+						<li>
+							<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fverstat.info&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=21&amp;appId=117473271673946" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:30px; width: 200px;"
+							allowTransparency="true"></iframe>
+						</li>
+						<li>
+							<iframe src="http://ghbtns.com/github-btn.html?user=Se7enSky&amp;repo=verstat&amp;type=watch" height="30" width="70" frameborder="0" scrolling="0" style="width:70px; height: 30px;" allowTransparency="true"></iframe>
+						</li>
+						<li>
+							<iframe src="http://ghbtns.com/github-btn.html?user=Se7enSky&amp;repo=verstat&amp;type=fork" height="30" width="70" frameborder="0" scrolling="0" style="width:70px; height: 30px;" allowTransparency="true"></iframe>
+						</li>
+						<li>
+							<iframe src="http://ghbtns.com/github-btn.html?user=Se7enSky&amp;type=follow" height="30" width="168" frameborder="0" scrolling="0" style="width:168px; height: 30px;" allowTransparency="true"></iframe>
+						</li>
+					</ul>
+					<h2>Contributors</h2>
+					<ul>
+						<li><a href="http://www.se7ensky.com/" target="_blank">Se7enSky</a> – birthplace</li>
+						<li><a href="https://github.com/krava" target="_blank">@krava</a> – maintainer, core and plugins</li>
+						<li><a href="https://github.com/romavab" target="_blank">@romavab</a> – verstat.info website maintainer</li>
+						<li><a href="http://kiselev.ua" target="_blank">Kiselev</a> – logo designer</li>
+					</ul>
+				</article>
+			</section>
+		</div>
+	</div>
+	<div class="footer">
+		<p class="text-center">
+			<img src="/assets/i/made-in-ukraine.png" alt="Made in Ukraine" width="110">
+		</p>
+	</div>
+	<script src="/assets/verstat.min.js"></script>
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript">
+		(function(d, w, c) {
+			(w[c] = w[c] || []).push(function() {
+				try {
+					w.yaCounter24335284 = new Ya.Metrika({
+						id: 24335284,
+						webvisor: true,
+						clickmap: true,
+						trackLinks: true,
+						accurateTrackBounce: true,
+						trackHash: true
+					});
+				} catch (e) {}
+			});
+			var n = d.getElementsByTagName("script")[0],
+				s = d.createElement("script"),
+				f = function() {
+					n.parentNode.insertBefore(s, n);
+				};
+			s.type = "text/javascript";
+			s.async = true;
+			s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+			if (w.opera == "[object Opera]") {
+				d.addEventListener("DOMContentLoaded", f, false);
+			} else {
+				f();
+			}
+		})(document, window, "yandex_metrika_callbacks");
+	</script>
+	<noscript>
+		<div>
+			<img src="//mc.yandex.ru/watch/24335284" style="position:absolute; left:-9999px;" alt="" />
+		</div>
+	</noscript>
+	<!-- /Yandex.Metrika counter -->
+	<script>
+		(function(i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function() {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o),
+			m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-49109041-1', 'verstat.info');
+		ga('send', 'pageview');
+	</script>
+</body>
+
+</html>
