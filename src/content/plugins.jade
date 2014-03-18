@@ -12,7 +12,7 @@ dl
 	dd Watch source files for changes and rebuild. It is simple but very smart.<br>Only relevant files are rebuilt.
 
 	dt livereload
-	dd Do livereload on file changes. HTML and JS reloads whole page, while CSS is applied without page reload.
+	dd Do livereload on file changes. HTML and JS reloads whole page, while CSS is applied without page reload. Works together with "watch" plugin.
 
 	dt sprockets
 	dd
@@ -25,7 +25,13 @@ dl
 		.example Examples: <a href="https://github.com/Se7enSky/verstat.info/blob/master/src/assets/verstat.min.js" target="_blank">verstat.min.js</a> and <a href="https://github.com/Se7enSky/verstat.info/blob/master/src/assets/verstat.min.css" target="_blank">verstat.min.css</a>.
 
 	dt globals
-	dd allows to prepend file contents into all other files.
+	dd
+		| Prepend file contents into all other files same-type source files. Currently supports Stylus and Jade files.
+		br
+		.example
+			| For example, you have many Stylus files.
+			br
+			| You can define global settings, such as fonts, dimensions, utility mixins without needing to @import.
 
 
 h2 Preprocessors
