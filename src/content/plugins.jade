@@ -5,13 +5,20 @@ h2 General purpose
 
 dl
 	dt watch
-	dd watch source files for changes and rebuild relevant output files
+	dd Watch source files for changes and rebuild. It is simple but very smart.<br>Only relevant files are rebuilt.
 
 	dt livereload
-	dd do livereload on file changes
+	dd Do livereload on file changes. HTML and JS reloads whole page, while CSS is applied without page reload.
 
 	dt sprockets
-	dd concat css and js files in sprockets-like way: <code>/*= require ... */</code> and <code>/*= require_tree ... */</code>
+	dd
+		| Concat css and js files in sprockets-like way:
+		br
+		pre.inline: code.language-javascript /*= require ... */
+		|  and  
+		pre.inline: code.language-javascript /*= require_tree ... */
+		br
+		.example Examples: <a href="https://github.com/Se7enSky/verstat.info/blob/master/src/assets/verstat.min.js" target="_blank">verstat.min.js</a> and <a href="https://github.com/Se7enSky/verstat.info/blob/master/src/assets/verstat.min.css" target="_blank">verstat.min.css</a>.
 
 	dt globals
 	dd &nbsp;
