@@ -1,6 +1,10 @@
 //---
 	title: Plugins
 
+pre: code.language-bash
+	| verstat install &lt;plugin1&gt; &lt;plugin2&gt;
+	| verstat uninstall &lt;plugin1&gt; &lt;plugin2&gt;
+
 h2 General purpose
 
 dl
@@ -14,7 +18,7 @@ dl
 	dd concat css and js files in sprockets-like way: <code>/*= require ... */</code> and <code>/*= require_tree ... */</code>
 
 	dt globals
-	dd &nbsp;
+	dd allows to prepend file contents into all other files.
 
 
 h2 Preprocessors
